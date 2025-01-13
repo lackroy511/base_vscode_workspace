@@ -1,0 +1,17 @@
+services:
+  service_1:
+    container_name: service_1
+    build:
+      context: ..
+      dockerfile: .devcontainer/dockerfile.dev
+    ports:
+      - "4100:4100"
+    command: tail -f /dev/null
+    volumes:
+      - ..:/root/base_vscode_workspace
+    env_file:
+      - ../.env
+    deploy:
+      resources:
+        limits:
+          memory: 8G

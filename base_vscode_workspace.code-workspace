@@ -1,0 +1,21 @@
+{
+    "folders": [
+        {
+            "path": "base_workspace_project"
+        }
+    ],
+    "launch": {
+        "configurations": [
+            {
+                "name": "Run some project",
+                "type": "debugpy",
+                "request": "launch",
+                "program": "${workspaceFolder:base_workspace_project}/app/main.py",
+                "console": "integratedTerminal",
+                "cwd": "${workspaceFolder:base_workspace_project}"
+            }
+        ]
+    },
+    "settings": {
+    }
+}
